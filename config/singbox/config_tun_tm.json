@@ -22,10 +22,16 @@
   "dns": {
     "servers": [
       {
+        "tag": "dns_reslove",
+        "address": "223.223.223.5",
+        "detour": "🎯 全球直连"
+      },
+      {
         "tag": "dns_direct",
-        "address": "local",
+        "address": "https://dns.alidns.com/dns-query",
         "address_strategy": "ipv4_only",
         "strategy": "ipv4_only",
+        "address_resolver": "dns_reslove",
         "detour": "🎯 全球直连"
       },
       {
@@ -33,7 +39,7 @@
         "address": "https://dns.google/dns-query",
         "address_strategy": "ipv4_only",
         "strategy": "ipv4_only",
-        "address_resolver": "dns_direct",
+        "address_resolver": "dns_reslove",
         "client_subnet": "27.39.144.1",
         "detour": "🚀 节点选择"
       }
@@ -347,7 +353,8 @@
       {
         "rule_set": "anti",
         "action": "reject",
-        "method": "drop"
+        "method": "default",
+        "no_drop": false
       },
       {
         "clash_mode": "direct",
@@ -572,7 +579,7 @@
         "tag": "anti",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/privacy-protection-tools/anti-ad.github.io/master/docs/anti-ad-sing-box.srs",
+        "url": "https://anti-ad.net/anti-ad-sing-box.srs",
         "download_detour": "🚀 节点选择"
       }
     ]
