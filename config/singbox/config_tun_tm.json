@@ -351,12 +351,6 @@
         "action": "hijack-dns"
       },
       {
-        "rule_set": "anti",
-        "action": "reject",
-        "method": "default",
-        "no_drop": false
-      },
-      {
         "clash_mode": "direct",
         "outbound": "🎯 全球直连"
       },
@@ -428,10 +422,6 @@
       {
         "rule_set": "geosite-microsoft",
         "outbound": "🪟 Microsoft"
-      },
-      {
-        "rule_set": "geosite-geolocation-!cn",
-        "outbound": "🚀 节点选择"
       },
       {
         "rule_set": [
@@ -513,13 +503,6 @@
         "download_detour": "🚀 节点选择"
       },
       {
-        "tag": "geosite-geolocation-!cn",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/geolocation-!cn.srs",
-        "download_detour": "🚀 节点选择"
-      },
-      {
         "tag": "geosite-cn",
         "type": "remote",
         "format": "binary",
@@ -573,13 +556,6 @@
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/private.srs",
-        "download_detour": "🚀 节点选择"
-      },
-      {
-        "tag": "anti",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://anti-ad.net/anti-ad-sing-box.srs",
         "download_detour": "🚀 节点选择"
       }
     ]
